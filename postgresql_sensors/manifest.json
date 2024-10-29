@@ -1,0 +1,11 @@
+{
+  "domain": "postgresql_sensors",
+  "name": "PostgreSQL Sensors",
+  "documentation": "https://github.com/djhui/HACS/postgresql_sensors",
+  "dependencies": [],
+  "codeowners": ["@Desmond"],
+  "requirements": ["psycopg2_binary"],
+  "config_flow": true,
+  "iot_class": "local_polling",
+  "version": "1.0.0"
+}
