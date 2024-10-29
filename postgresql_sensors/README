@@ -58,4 +58,5 @@ This would create a sensor that displays the most recent temperature from a weat
 - This integration requires the `psycopg2-binary` package, which should be automatically installed with the component.
 
 For more information or to report issues, please visit the [GitHub repository](https://github.com/your_username/ha-postgresql-sensors).
+![QR Code](https://github.com/user-attachments/assets/5c74897a-e32a-4fcc-b41c-1fc0d76a2494)
 
