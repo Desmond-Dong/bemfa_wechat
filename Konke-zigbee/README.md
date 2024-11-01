@@ -19,6 +19,5 @@ After installation, you can configure the Konke Zigbee switches:
 3. Enter the required information:
    - **JSON URL**: The URL to fetch switch configurations (default is `http://127.0.0.1:8000/`).
 
-## Example Configuration
+![QR Code](https://github.com/user-attachments/assets/5c74897a-e32a-4fcc-b41c-1fc0d76a2494)
 
-Here's an example of how to set up a switch:
