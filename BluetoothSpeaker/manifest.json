@@ -1,0 +1,11 @@
+{
+    "domain": "bluetooth_speaker",
+    "name": "Bluetooth Speaker",
+    "version": "1.0",
+    "config_flow": true,
+    "documentation": "https://example.com/docs",
+    "requirements": [],
+    "dependencies": [],
+    "codeowners": []
+  }
+  
