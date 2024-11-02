@@ -1,10 +1,10 @@
 {
   "domain": "bluetooth_speaker",
   "name": "Bluetooth Speaker",
-  "version": "1.0",
+  "version": "1.0.0",
   "config_flow": true,
-  "documentation": "https://example.com/docs",
+  "documentation": "https://github.com/your-username/bluetooth_speaker",
   "requirements": [],
   "dependencies": [],
-  "codeowners": []
+  "codeowners": ["@your-username"]
 }
