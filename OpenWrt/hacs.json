@@ -1,0 +1,11 @@
+{
+  "name": "HACS OpenWrt Integration",
+  "version": "1.0.0",
+  "description": "Integration for OpenWrt devices in Home Assistant.",
+  "documentation": "https://github.com/yourusername/HACS/OpenWrt",
+  "codeowners": ["@yourusername"],
+  "dependencies": [],
+  "requirements": [],
+  "config_flow": true,
+  "iot_class": "local_polling"
+}

@@ -1,0 +1,11 @@
+{
+  "domain": "openwrt",
+  "name": "OpenWrt Integration",
+  "documentation": "https://github.com/yourusername/HACS/OpenWrt",
+  "dependencies": [],
+  "codeowners": ["@yourusername"],
+  "requirements": [],
+  "config_flow": true,
+  "iot_class": "local_polling",
+  "version": "1.0.0"
+}
