@@ -1,11 +1,21 @@
-# Bluetooth Speaker Integration for Home Assistant
+# Bluetooth Speaker Integration
 
-This integration allows you to connect and control Bluetooth speakers within Home Assistant. Features include:
-- Automatic discovery of Bluetooth devices
-- Connect, disconnect, and volume control
-- Option to auto-connect on startup
+Control your Bluetooth speakers through Home Assistant.
 
-## Installation
-1. Add this repository to HACS as a custom repository.
-2. Install the integration from HACS.
-3. Configure the component in the Home Assistant interface.
+## Features
+- Easy setup through UI
+- Auto-connect capability
+- Basic media controls (play/pause)
+- Volume control
+- Connection status monitoring
+
+## Usage
+1. Install the integration through HACS
+2. Add the integration through HA Settings > Devices & Services
+3. Select your Bluetooth speaker from the discovered devices
+4. Configure auto-connect if desired
+
+## Requirements
+- Linux-based Home Assistant installation
+- Bluetooth capability
+- `bluetoothctl` command available on the system

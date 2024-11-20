@@ -1,0 +1,11 @@
+{
+  "domain": "ezviz_doorbell",
+  "name": "EZVIZ Doorbell",
+  "documentation": "https://github.com/yourusername/ezviz_doorbell",
+  "dependencies": [],
+  "codeowners": ["@yourusername"],
+  "requirements": ["pyezviz==0.2.0.3"],
+  "config_flow": true,
+  "iot_class": "cloud_polling",
+  "version": "0.1.0"
+}
