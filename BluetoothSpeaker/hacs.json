@@ -1,4 +1,9 @@
 {
-    "name": "BluetoothSpeaker",
-    "render_readme": true
+    "name": "Bluetooth Speaker",
+    "render_readme": true,
+    "domain": "bluetooth_speaker",
+    "documentation": "https://github.com/yourusername/bluetooth_speaker",
+    "issue_tracker": "https://github.com/yourusername/bluetooth_speaker/issues",
+    "dependencies": [],
+    "homeassistant": "2023.3.0"
 }
