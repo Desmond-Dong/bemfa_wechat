@@ -1,0 +1,9 @@
+{
+    "domain": "bluetooth_speaker",
+    "name": "Bluetooth Speaker",
+    "version": "1.0",
+    "documentation": "https://github.com/yourrepo/bluetooth_speaker",
+    "dependencies": [],
+    "codeowners": ["@yourgithubhandle"],
+    "requirements": ["pybluez"]  # Or other Bluetooth libraries
+}
