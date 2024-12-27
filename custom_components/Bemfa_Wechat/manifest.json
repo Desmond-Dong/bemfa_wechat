@@ -5,6 +5,7 @@
     "documentation": "https://github.com/djhui/HACS/blob/main/README.md",
     "requirements": [],
     "dependencies": [],
+    "issue_tracker": "https://github.com/djhui/bemfa_wechat/issues",
     "codeowners": ["@Dede"],
     "config_flow": true
 }
