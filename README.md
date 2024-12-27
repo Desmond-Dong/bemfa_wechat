@@ -15,6 +15,9 @@
 1. 在HACS中搜索`Bemfa Wechat`
 2. 点击下载安装
 3. 重启Home Assistant
+4. HACS源可以选择Github或者Gitee
+    https://gitee.com/desmond_GT/HACS
+    https://github.com/djhui/HACS
 
 ## ⚙️ 配置说明
 
