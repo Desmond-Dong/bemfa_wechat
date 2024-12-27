@@ -1,0 +1,17 @@
+send_message:
+  description: "Send a message via Bemfa WeChat API"
+  fields:
+    device:
+      description: "Device name"
+      example: "LivingRoomSensor"
+      required: true
+    message:
+      description: "Message content"
+      example: "Motion detected in the living room!"
+      required: true
+    group:
+      description: "Message group (optional)"
+      example: "HomeSecurity"
+    url:
+      description: "Redirect URL (optional)"
+      example: "https://example.com"

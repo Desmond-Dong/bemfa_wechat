@@ -1,0 +1,10 @@
+{
+    "domain": "bemfa_wechat",
+    "name": "Bemfa WeChat",
+    "version": "1.0.0",
+    "documentation": "https://cloud.bemfa.com/docs/src/api_wechat.html",
+    "requirements": [],
+    "dependencies": [],
+    "codeowners": ["@Dede"],
+    "config_flow": true
+}
