@@ -17,9 +17,9 @@
 3. 重启Home Assistant
 4. HACS源可以选择Github或者Gitee
 
-    https://gitee.com/desmond_GT/HACS
+    https://gitee.com/desmond_GT/bemfa_wechat
 
-    https://github.com/djhui/HACS
+    https://github.com/djhui/bemfa_wechat
 
 ## ⚙️ 配置说明
 
