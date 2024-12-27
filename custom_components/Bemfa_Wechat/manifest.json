@@ -8,5 +8,6 @@
     "codeowners": ["@Dede"],
     "config_flow": true,
     "requirements": [],
-    "dependencies": []
+    "dependencies": [],
+    "icon": "https://brands.home-assistant.io/_/bemfa/icon.png"
 }
