@@ -2,7 +2,7 @@
     "domain": "bemfa_wechat",
     "name": "Bemfa WeChat",
     "version": "1.0.0",
-    "documentation": "https://cloud.bemfa.com/docs/src/api_wechat.html",
+    "documentation": "https://github.com/djhui/HACS/blob/main/README.md",
     "requirements": [],
     "dependencies": [],
     "codeowners": ["@Dede"],
