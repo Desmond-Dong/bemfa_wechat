@@ -38,7 +38,9 @@
 
 ### 📝 调用方法
 **Action:** Bemfa WeChat: send_message
+
 **Action data:**
+
 {
 "device":"设备",
 "message":"消息内容"
