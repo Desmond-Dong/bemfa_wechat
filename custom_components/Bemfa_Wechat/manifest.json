@@ -3,10 +3,10 @@
     "name": "Bemfa WeChat",
     "version": "1.0.0",
     "documentation": "https://github.com/djhui/HACS/blob/main/README.md",
-    "requirements": [],
-    "dependencies": [],
     "issue_tracker": "https://github.com/djhui/bemfa_wechat/issues",
     "iot_class": "cloud_polling",
     "codeowners": ["@Dede"],
-    "config_flow": true
+    "config_flow": true,
+    "requirements": [],
+    "dependencies": []
 }
