@@ -17,7 +17,7 @@
 3. 重启Home Assistant
 4. HACS源可以选择Github或者Gitee
 
-    https://gitee.com/desmond_GT/bemfa_wechat
+    https://gitee.com/desmond_GT/bemfa_wechat （仅支持下载，不支持加上HACS自定义源）
 
     https://github.com/djhui/bemfa_wechat
 
@@ -41,9 +41,10 @@
 
 **Action data:**
 
+# Start of Selection
 {
-"device":"设备",
-"message":"消息内容"
+    "device": "设备",
+    "message": "消息内容"
 }
 
 扫描下面二维码，关注我。有需要可以随时给我留言
