@@ -1,2 +1,2 @@
-DOMAIN = "bemfa_wechat"
+DOMAIN = "bemfa"
 CONF_UID = "uid"
