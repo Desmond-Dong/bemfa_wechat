@@ -1,45 +1,64 @@
 import logging
 import aiohttp
-from homeassistant.core import HomeAssistant
-from homeassistant.helpers.typing import ConfigType
-from homeassistant.helpers import service
+from homeassistant.core import HomeAssistant, ServiceCall
+from homeassistant.config_entries import ConfigEntry
+
 from .const import DOMAIN, CONF_UID
 
 _LOGGER = logging.getLogger(__name__)
 
-async def async_setup_entry(hass: HomeAssistant, entry: ConfigType):
-    """Set up Bemfa WeChat from a config entry."""
+async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     uid = entry.data[CONF_UID]
 
-    async def handle_send_message(call):
-        """Handle the send_message service call."""
-        device = call.data.get("device")
-        message = call.data.get("message")
-        group = call.data.get("group", "default")  # 默认分组
-        url = call.data.get("url", "")  # 默认空链接
+    async def handle_send_message(call: ServiceCall):
+        device = call.data.get("device_entity")
+        message = call.data.get("message", "").strip()
+        group = call.data.get("group", "default")
+        url = call.data.get("url", "")
 
         if not device or not message:
-            _LOGGER.error("Device and message must be provided")
+            _LOGGER.error("device_entity 和 message 参数必填")
             return
 
-        api_url = "https://apis.bemfa.com/vb/wechat/v1/wechatAlertJson"
+        state_obj = hass.states.get(device)
+        if state_obj:
+            friendly_name = state_obj.attributes.get("friendly_name", device)
+            state_value = state_obj.state
+        else:
+            friendly_name = device
+            state_value = "无实体状态"
+
+        final_message = f"{friendly_name}（状态：{state_value}）: {message}"
+        _LOGGER.debug("最终发送微信消息内容：%s", final_message)
+
         payload = {
             "uid": uid,
-            "device": device,
-            "message": message,
+            "device": device.replace(".", "_"),
+            "message": final_message,
             "group": group,
             "url": url,
         }
 
         headers = {"Content-Type": "application/json; charset=utf-8"}
 
-        async with aiohttp.ClientSession() as session:
-            async with session.post(api_url, json=payload, headers=headers) as response:
-                if response.status == 200:
-                    _LOGGER.info("Message sent successfully!")
-                else:
-                    _LOGGER.error("Failed to send message: %s", await response.text())
+        try:
+            async with aiohttp.ClientSession() as session:
+                async with session.post(
+                    "https://apis.bemfa.com/vb/wechat/v1/wechatAlertJson",
+                    json=payload,
+                    headers=headers
+                ) as response:
+                    resp_text = await response.text()
+                    if response.status == 200:
+                        _LOGGER.info("微信消息发送成功")
+                    else:
+                        _LOGGER.error("发送失败 [%s]: %s", response.status, resp_text)
+        except Exception as e:
+            _LOGGER.exception("发送微信消息异常: %s", e)
 
-    # 注册服务，确保通过 async_register 注册服务
     hass.services.async_register(DOMAIN, "send_message", handle_send_message)
+
+    await hass.config_entries.async_forward_entry_setups(entry, ["button"])
+
+    _LOGGER.info("Bemfa WeChat 初始化完成")
     return True

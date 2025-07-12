@@ -1,12 +1,10 @@
 {
-    "domain": "bemfa_wechat",
-    "name": "Bemfa WeChat",
-    "version": "1.0.2",
-    "documentation": "https://mp.weixin.qq.com/s/zKbggVRAoj-6VOLBNj5FFQ",
-    "issue_tracker": "https://github.com/djhui/bemfa_wechat/issues",
-    "iot_class": "cloud_polling",
-    "codeowners": ["@djhui"],
-    "config_flow": true,
-    "requirements": [],
-    "dependencies": []
+  "domain": "bemfa_wechat",
+  "name": "Bemfa WeChat",
+  "version": "1.1.0",
+  "requirements": ["aiohttp"],
+  "codeowners": [],
+  "config_flow": true,
+  "iot_class": "cloud_push",
+  "platforms": ["button"]
 }

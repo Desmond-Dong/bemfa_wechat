@@ -17,9 +17,12 @@
 3. 重启Home Assistant
 4. HACS源可以选择Github或者Gitee
 
-    https://gitee.com/desmond_GT/bemfa_wechat （仅支持下载，不支持加上HACS自定义源）
+    https://gitee.com/desmond_GT/bemfa_wechat （仅支持下载安装，不支持加上HACS自定义源）
 
-    https://github.com/djhui/bemfa_wechat
+    https://github.com/desmond-dong/bemfa_wechat
+
+ 
+
 
 ## ⚙️ 配置说明
 
@@ -31,7 +34,7 @@
 ## 🚀 使用方法
 
 1. 注册巴法云账号，并获取密钥,关注或者绑定巴法云微信号
-2. 在HACS中搜索 `Bemfa Wechat` 安装，或者 clone 此项目，将 `custom_components/Bemfa_Wechat` 目录拷贝至 Home Assistant 配置目录的 `custom_components` 目录下
+2. 在HACS中搜索 `Bemfa Wechat` 安装，或者 clone 此项目，将 `custom_components/Bemfa_Wechat` 目录拷贝至 Home Assistant 配置目录的 `custom_components` 目录下 也可以   [![一键添加到HACS](https://img.shields.io/badge/HACS-一键添加-blue?style=for-the-badge&logo=home-assistant&labelColor=blue)](https://my.home-assistant.io/redirect/hacs_repository/?owner=desmond-dong&repository=bemfa_wechat&category=integration)
 3. 重启 Home Assistant 服务
 4. 在 Home Assistant 的集成页面，搜索 "Bemfa Wechat" 并添加
 5. 根据提示输入巴法云密钥后提交
@@ -40,12 +43,10 @@
 **Action:** Bemfa WeChat: send_message
 
 **Action data:**
-
-# Start of Selection
-{
-    "device": "设备",
-    "message": "消息内容"
-}
+```json
+"device": "设备",
+"message": "消息内容"
+```
 
 扫描下面二维码，关注我。有需要可以随时给我留言
 
