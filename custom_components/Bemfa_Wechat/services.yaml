@@ -7,13 +7,7 @@ send_message:
       description: 从系统中选择一个实体（如传感器、摄像头等）
       required: true
       selector:
-        entity:
-          domain:
-            - binary_sensor
-            - sensor
-            - camera
-            - device_tracker
-          multiple: false
+        entity: {} 
 
     message:
       name: 消息内容
