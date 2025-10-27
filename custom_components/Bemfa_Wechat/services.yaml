@@ -1,43 +1,33 @@
 send_message:
   name: 发送微信消息
-  description: 通过 Bemfa API 发送微信消息通知
+  description: 通过巴法云 API 发送微信内容
   fields:
     device_entity:
-      name: 消息来源实体
-      description: 从系统中选择一个实体（如传感器、摄像头等）
+      name: 实体
+      description: 用于展示状态的实体（可选）
       required: true
       selector:
-        entity:
-          domain:
-            - binary_sensor
-            - sensor
-            - camera
-            - device_tracker
-          multiple: false
-
+        entity: {}
     message:
-      name: 消息内容
-      description: 要发送的消息文本内容
+      name: 消息
+      description: 要发送的附加信息
       required: true
-      example: "检测到异常"
       selector:
         text:
           multiline: true
-
     group:
-      name: 消息分组（可选）
-      description: 用于分组接收消息
+      name: 分组（可选）
+      description: 微信推送的分组标识
       required: false
-      example: "HomeSecurity"
+      default: "default"
       selector:
         text:
           multiline: false
-
     url:
       name: 跳转链接（可选）
-      description: 点击消息后跳转的链接地址
+      description: 微信消息跳转的 URL
       required: false
-      example: "https://example.com"
+      default: ""
       selector:
         text:
           multiline: false

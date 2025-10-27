@@ -57,8 +57,5 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
             _LOGGER.exception("发送微信消息异常: %s", e)
 
     hass.services.async_register(DOMAIN, "send_message", handle_send_message)
-
     await hass.config_entries.async_forward_entry_setups(entry, ["button"])
-
-    _LOGGER.info("Bemfa WeChat 初始化完成")
     return True

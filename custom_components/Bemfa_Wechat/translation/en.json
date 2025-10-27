@@ -1,0 +1,17 @@
+{
+  "title": "Bemfa WeChat",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure Bemfa WeChat",
+        "description": "Enter your UID",
+        "data": {
+          "uid": "UID"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "This UID is already configured"
+    }
+  }
+}

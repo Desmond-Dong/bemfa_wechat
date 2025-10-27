@@ -1,10 +1,11 @@
 {
   "domain": "bemfa_wechat",
   "name": "Bemfa WeChat",
-  "version": "1.1.0",
-  "requirements": ["aiohttp"],
-  "codeowners": [],
-  "config_flow": true,
+  "version": "1.0.0",
+  "documentation": "https://github.com/desmond-dong/bemfa_wechat",
+  "dependencies": [],
+  "codeowners": ["@desmond-dong"],
   "iot_class": "cloud_push",
-  "platforms": ["button"]
+  "config_flow": false,
+  "requirements": []
 }
