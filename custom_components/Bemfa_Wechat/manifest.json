@@ -7,7 +7,7 @@
   "dependencies": [],
   "codeowners": ["@desmond-dong"],
   "iot_class": "cloud_push",
-  "config_flow": false,
+  "config_flow": true,
   "requirements": [],
   "integration_type": "service",
   "quality_score": 85

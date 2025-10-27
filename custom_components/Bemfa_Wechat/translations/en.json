@@ -1,0 +1,30 @@
+{
+  "title": "Bemfa WeChat",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure Bemfa WeChat",
+        "description": "Enter your Bemfa Cloud UID",
+        "data": {
+          "name": "Name",
+          "uid": "UID"
+        }
+      }
+    },
+    "error": {
+      "empty_uid": "UID cannot be empty",
+      "invalid_uid": "UID format is invalid",
+      "already_configured": "This UID is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Bemfa WeChat Options",
+        "data": {
+          "name": "Name"
+        }
+      }
+    }
+  }
+}

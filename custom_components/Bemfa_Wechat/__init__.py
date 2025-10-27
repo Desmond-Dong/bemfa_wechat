@@ -3,7 +3,7 @@ import aiohttp
 from homeassistant.core import HomeAssistant, ServiceCall
 from homeassistant.config_entries import ConfigEntry
 
-from .const import DOMAIN, CONF_UID
+from .const import DOMAIN, CONF_UID, CONF_NAME
 
 _LOGGER = logging.getLogger(__name__)
 

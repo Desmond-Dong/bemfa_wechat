@@ -1,0 +1,27 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "请输入你的巴法云 UID 来配置微信通知功能",
+        "data": {
+          "name": "实例名称",
+          "uid": "巴法云 UID"
+        }
+      }
+    },
+    "error": {
+      "empty_uid": "UID 不能为空",
+      "invalid_uid": "UID 格式不正确，请检查你的巴法云账户",
+      "already_configured": "此 UID 已经配置过了"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "name": "实例名称"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Bemfa 微信",
+  "config": {
+    "step": {
+      "user": {
+        "title": "配置 Bemfa WeChat",
+        "description": "请输入你的巴法云 UID",
+        "data": {
+          "name": "名称",
+          "uid": "UID"
+        }
+      }
+    },
+    "error": {
+      "empty_uid": "UID 不能为空",
+      "invalid_uid": "UID 格式不正确",
+      "already_configured": "此 UID 已配置过"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Bemfa 微信选项",
+        "data": {
+          "name": "名称"
+        }
+      }
+    }
+  }
+}
