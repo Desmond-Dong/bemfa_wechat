@@ -42,7 +42,8 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         headers = {"Content-Type": "application/json; charset=utf-8"}
 
         try:
-            async with aiohttp.ClientSession() as session:
+            timeout = aiohttp.ClientTimeout(total=10)
+            async with aiohttp.ClientSession(timeout=timeout) as session:
                 async with session.post(
                     "https://apis.bemfa.com/vb/wechat/v1/wechatAlertJson",
                     json=payload,
@@ -53,6 +54,8 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
                         _LOGGER.info("微信消息发送成功")
                     else:
                         _LOGGER.error("发送失败 [%s]: %s", response.status, resp_text)
+        except aiohttp.ClientError as e:
+            _LOGGER.error("网络请求错误: %s", e)
         except Exception as e:
             _LOGGER.exception("发送微信消息异常: %s", e)
 
